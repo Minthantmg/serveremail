@@ -44,7 +44,7 @@ async function server(email, subject, body) {
 
     const mailOptions = {
         from: 'minthant180@gmail.com', // Replace with your authenticated email address
-        to: 'minthant12310@gmail.com',
+        to: 'minthantmg169@gmail.com',
         subject,
         template: 'email',
         context:{

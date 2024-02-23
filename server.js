@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 require('dotenv').config(); // Load environment variables from .env file
+const path = require('path')
+var hbs = require('nodemailer-express-handlebars')
 
 const app = express();
 
@@ -28,11 +30,27 @@ async function server(email, subject, body) {
         },
     });
 
+    const  handlebarOptions = {
+        viewEngine: {
+            extName: ".html",
+            partialsDir: path.resolve('./view'),
+            defaultLayout: false,
+        },
+        viewPath: path.resolve('./view'),
+        extName: ".handlebars"
+    }
+
+    transporter.use('compile',hbs(handlebarOptions));
+
     const mailOptions = {
         from: 'minthant180@gmail.com', // Replace with your authenticated email address
         to: 'minthant12310@gmail.com',
         subject,
-        text: email + body,
+        text: body,
+        context:{
+            title : email,
+            text: body
+        }
     };
 
     try {

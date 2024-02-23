@@ -47,6 +47,7 @@ async function server(email, subject, body) {
         to: 'minthant12310@gmail.com',
         subject,
         text: body,
+        template: 'email',
         context:{
             title : email,
             text: body

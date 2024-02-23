@@ -46,11 +46,11 @@ async function server(email, subject, body) {
         from: 'minthant180@gmail.com', // Replace with your authenticated email address
         to: 'minthant12310@gmail.com',
         subject,
-        text: body,
         template: 'email',
         context:{
             title : subject,
-            text: email
+            text: email,
+            detail: body
         }
     };
 

@@ -1,27 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <style>
-        container_flex {
+        .container_flex {
             display: flex;
         }
 
-        title {
-            font-size: 10px;
-            font-weight: bold;
+        .sub_title {
+            font-size: 14px;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            padding-left: 20px;
         }
 
-        sub_title {
-            font-size: 5px;
+        .title {
+            font-size: 20px;
+            display: flex;
         }
 
         p {
-            color: blue
+            margin-top: 20px;
+            word-spacing: 3px;
         }
     </style>
 </head>
@@ -30,5 +37,8 @@
     <div class="title">{{title}}</div>
     <div class="sub_title">{{text}}</div>
 </div>
+<p>
+{{detail}}
+</p>
 </body>
 </html>

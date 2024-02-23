@@ -44,6 +44,10 @@ async function server(email, subject, body) {
     }
 }
 
+app.get('/test', async (req, res) => {
+    res.send({message : "success"})
+});
+
 app.post('/send-email', async (req, res) => {
     const { email, subject, body } = req.body;
     try {

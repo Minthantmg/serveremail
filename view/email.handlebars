@@ -7,12 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        h1 {color : red}
-        p {color: blue}
+        container_flex {
+            display: flex;
+        }
+
+        title {
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        sub_title {
+            font-size: 5px;
+        }
+
+        p {
+            color: blue
+        }
     </style>
 </head>
 <body>
-<h1>{{title}}</h1>
-<p>{{text}}</p>
+<div class="container_flex">
+    <div class="title">{{title}}</div>
+    <div class="sub_title">{{text}}</div>
+</div>
 </body>
 </html>

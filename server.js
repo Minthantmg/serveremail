@@ -49,8 +49,8 @@ async function server(email, subject, body) {
         text: body,
         template: 'email',
         context:{
-            title : email,
-            text: body
+            title : subject,
+            text: email
         }
     };
 
